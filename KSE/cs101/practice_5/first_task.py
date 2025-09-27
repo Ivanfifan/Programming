@@ -74,7 +74,7 @@ while True:
                 generated_password = generated_password + str(random.randint(0, 9))
             else:
                 generated_password = generated_password + random.choice(punctuation)
-            n = n + 1
+            n += 1
         print(generated_password)
         print('Want to add password to list?\n1.Yes\n2.No')
         add_password = int(input('Your choice: '))
