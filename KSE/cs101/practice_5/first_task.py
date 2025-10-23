@@ -26,7 +26,7 @@ while True:
             password = str(input('Enter your password again: '))
         passwords.append((name, login, password))
         print('You have successfully registered!')
-    if result == 2:
+    elif result == 2:
         search_name = str(input('Enter the name of the program you want to find: '))
         for ch in passwords:
             if search_name in ch:
