@@ -21,8 +21,10 @@
 # print(count)
 
 #Task 3
-number_height = int(input('Enter height: '))
-for i in range(1, number_height + 1):
-    spaces = number_height - i
-    stars = 2 * i - 1
-    print(' ' * spaces + '*' * stars)
+# number_height = int(input('Enter height: '))
+# for i in range(1, number_height + 1):
+#     spaces = number_height - i
+#     stars = 2 * i - 1
+#     print(' ' * spaces + '*' * stars)
+
+#Task 4
