@@ -21,6 +21,9 @@ def unique_characters(s: str):
             return False
     return True
 
+def unique_characters2(s: str):
+    return len(s) == len(set(s))
+
 def fibonaci(a):
 
     if a <= 0:
@@ -52,5 +55,28 @@ def swap(s: str):
 
 print(swap('Я гЕй'))
 
+lower = 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюя'
+upper = 'АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ'
+len_ukr = len(lower) # 33
+def cezar_crypt(text, shift):
+    result = ''
+    key_norm = shift % len_ukr
+    for i in text:
+        if i in lower:
+            old_index = lower.find(i)
 
-def cezar(text,key):
+            new_index = (old_index + key_norm) % len_ukr
+
+            result += lower[new_index]
+        elif i in upper:
+            old_index = upper.find(i)
+
+            new_index = (old_index + key_norm) % len_ukr
+
+            result += upper[new_index]
+        else:
+            result += i
+
+    return result
+def cezar_decrypt(text, shift):
+    return cezar_crypt(text, -shift)
